@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flotix</title>
+<meta name="description" content="Flotix is a fleet management platform with real time GPS and IoT monitoring.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#home">
+      <img src="images/flotix-logo.png" alt="Flotix">
+    </a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#benefits" data-i18n="nav.benefits">Benefits</a></li>
+        <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language selector">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <button type="button" class="btn btn-ghost desktop-only" data-i18n="nav.signIn">Sign in</button>
+      <button type="button" class="btn btn-primary desktop-only" data-i18n="nav.signUp">Sign up</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Inicio -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <h1 data-i18n="hero.title">Control your fleet from a single platform</h1>
+        <p class="hero-sub" data-i18n="hero.subtitle">Flotix connects vehicles, drivers and maintenance workshops through IoT and GPS, so owners monitor fuel, mileage and routes in real time.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#plans" data-i18n="hero.ctaPrimary">See plans</a>
+          <a class="btn btn-ghost" href="#benefits" data-i18n="hero.ctaSecondary">See benefits</a>
+        </div>
+        <div class="hero-segments">
+          <div>
+            <span class="stat-num">120+</span>
+            <span class="stat-label" data-i18n="hero.statVehicles">vehicles tracked in the pilot</span>
+          </div>
+          <div>
+            <span class="stat-num">18</span>
+            <span class="stat-label" data-i18n="hero.statWorkshops">affiliated workshops</span>
+          </div>
+          <div>
+            <span class="stat-num">99.4%</span>
+            <span class="stat-label" data-i18n="hero.statUptime">GPS device uptime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="benefits" class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker" data-i18n="benefits.kicker">Benefits</span>
+        <h2 data-i18n="benefits.title">Everything a fleet operation needs, in one route</h2>
+        <p data-i18n="benefits.subtitle">Four connected capabilities cover the daily work of running vehicles, fuel, maintenance and visibility.</p>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-item">
+          <span class="waypoint" aria-hidden="true"></span>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 16.5V9l3-5h10l3 5v7.5"/><path d="M4 16.5h16"/><circle cx="8" cy="18.5" r="2"/><circle cx="16" cy="18.5" r="2"/>
+          </svg>
+          <h3 data-i18n="benefits.fleetTitle">Fleet management</h3>
+          <p data-i18n="benefits.fleetBody">Register vehicles and drivers, assign units and review the full history of every plate.</p>
+        </div>
+        <div class="feature-item">
+          <span class="waypoint" aria-hidden="true"></span>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 21V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v16"/><path d="M6 21h9"/><path d="M15 9h1.5a1.5 1.5 0 0 1 1.5 1.5V17a1.5 1.5 0 0 0 3 0v-6l-2.5-3"/><path d="M9 8h4"/>
+          </svg>
+          <h3 data-i18n="benefits.fuelTitle">Fuel control</h3>
+          <p data-i18n="benefits.fuelBody">Log every refill, compare efficiency across units and catch anomalies before they add up.</p>
+        </div>
+        <div class="feature-item">
+          <span class="waypoint" aria-hidden="true"></span>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a4 4 0 0 1-5.3 5.3L4 17v3h3l5.4-5.4a4 4 0 0 1 5.3-5.3l-2.6 2.6-2-2z"/>
+          </svg>
+          <h3 data-i18n="benefits.maintenanceTitle">Preventive maintenance</h3>
+          <p data-i18n="benefits.maintenanceBody">Schedule service by mileage or date and coordinate work with affiliated workshops end to end.</p>
+        </div>
+        <div class="feature-item">
+          <span class="waypoint" aria-hidden="true"></span>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/>
+          </svg>
+          <h3 data-i18n="benefits.monitoringTitle">Real time monitoring</h3>
+          <p data-i18n="benefits.monitoringBody">Track location, routes and speed for every active unit through the GPS and IoT device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section id="plans">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker" data-i18n="plans.kicker">Plans and pricing</span>
+        <h2 data-i18n="plans.title">Pick the plan that matches your fleet</h2>
+        <p data-i18n="plans.subtitle">Every plan includes fuel control, maintenance coordination and the mobile app for drivers.</p>
+      </div>
+
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3 data-i18n="plans.starterName">Starter</h3>
+          <p class="plan-price">S/ 149<span data-i18n="plans.perMonth">/ month</span></p>
+          <p class="plan-fleet-size" data-i18n="plans.starterFleet">Up to 5 vehicles</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.starterFeature1">Centralized vehicle and driver registry</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.starterFeature2">Fuel logging and consumption history</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.starterFeature3">Email support</span></li>
+          </ul>
+          <button type="button" class="btn btn-outline btn-block" data-i18n="plans.ctaChoose">Choose plan</button>
+        </div>
+
+        <div class="plan-card is-recommended">
+          <span class="plan-flag" data-i18n="plans.growthFlag">Recommended</span>
+          <h3 data-i18n="plans.growthName">Growth</h3>
+          <p class="plan-price">S/ 349<span data-i18n="plans.perMonth">/ month</span></p>
+          <p class="plan-fleet-size" data-i18n="plans.growthFleet">Up to 25 vehicles</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.growthFeature1">Everything in Starter</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.growthFeature2">Real time GPS monitoring and route history</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.growthFeature3">Preventive maintenance scheduling</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.growthFeature4">Priority chat support</span></li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-block" data-i18n="plans.ctaChoose">Choose plan</button>
+        </div>
+
+        <div class="plan-card">
+          <h3 data-i18n="plans.fleetName">Fleet</h3>
+          <p class="plan-price">S/ 749<span data-i18n="plans.perMonth">/ month</span></p>
+          <p class="plan-fleet-size" data-i18n="plans.fleetFleet">Unlimited vehicles</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.fleetFeature1">Everything in Growth</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.fleetFeature2">Efficiency and comparison reports</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.fleetFeature3">Multiple administrator accounts</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg><span data-i18n="plans.fleetFeature4">Dedicated account manager</span></li>
+          </ul>
+          <button type="button" class="btn btn-outline btn-block" data-i18n="plans.ctaChoose">Choose plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conoce al equipo (not in the main nav, reachable by scrolling only) -->
+  <section id="team" class="premium-team">
+    <div class="container">
+      <h2 class="team-title-modern" data-i18n="team.title">Meet the team</h2>
+
+      <div class="team-container">
+
+        <div class="member-card" data-member="1">
+          <div class="member-tabs">
+            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+          </div>
+          <div class="member-avatar-ring"><img src="images/team/gonzalo.jpg" alt="Gonzalo Alexander Jaime Forcelledo"></div>
+          <div class="member-content-pane active" data-pane="info">
+            <span class="member-role-label" data-i18n="team.member1.role">Software Engineering</span>
+            <h3 class="member-name-large">Gonzalo Alexander Jaime Forcelledo</h3>
+            <span class="member-code">U202319329</span>
+          </div>
+          <div class="member-content-pane" data-pane="bio">
+            <p class="bio-text" data-i18n="team.member1.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+          </div>
+        </div>
+
+        <div class="member-card" data-member="2">
+          <div class="member-tabs">
+            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+          </div>
+          <div class="member-avatar-ring"><img src="images/team/mauricio.jpg" alt="Mauricio Joao Ramirez Rodriguez"></div>
+          <div class="member-content-pane active" data-pane="info">
+            <span class="member-role-label" data-i18n="team.member2.role">Software Engineering</span>
+            <h3 class="member-name-large">Mauricio Joao Ramirez Rodriguez</h3>
+            <span class="member-code">U202218235</span>
+          </div>
+          <div class="member-content-pane" data-pane="bio">
+            <p class="bio-text" data-i18n="team.member2.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+          </div>
+        </div>
+
+        <div class="member-card" data-member="3">
+          <div class="member-tabs">
+            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+          </div>
+          <div class="member-avatar-ring"><img src="images/team/joaquin.jpg" alt="Joaquin Andre Lechuga Aguilar"></div>
+          <div class="member-content-pane active" data-pane="info">
+            <span class="member-role-label" data-i18n="team.member3.role">Software Engineering</span>
+            <h3 class="member-name-large">Joaquin Andre Lechuga Aguilar</h3>
+            <span class="member-code">U202221619</span>
+          </div>
+          <div class="member-content-pane" data-pane="bio">
+            <p class="bio-text" data-i18n="team.member3.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+          </div>
+        </div>
+
+        <div class="member-card" data-member="4">
+          <div class="member-tabs">
+            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+          </div>
+          <div class="member-avatar-ring"><img src="images/team/gustavo.jpg" alt="Gustavo Alonso Olivares Lao"></div>
+          <div class="member-content-pane active" data-pane="info">
+            <span class="member-role-label" data-i18n="team.member4.role">Software Engineering</span>
+            <h3 class="member-name-large">Gustavo Alonso Olivares Lao</h3>
+            <span class="member-code">U202216448</span>
+          </div>
+          <div class="member-content-pane" data-pane="bio">
+            <p class="bio-text" data-i18n="team.member4.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/flotix-logo-lockup.png" alt="Flotix — Tu flota, siempre bajo control">
+        <p data-i18n="footer.blurb">Fleet management with real time IoT and GPS monitoring for owners, drivers and mechanic workshops.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 8.5h-2a1.5 1.5 0 0 0-1.5 1.5v2h3.3l-.4 3H11.5V21h-3v-6H6.5v-3H8.5V9.5A4 4 0 0 1 12.5 5.5H15z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="16.7" cy="7.3" r="0.9" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 4v10.2a2.9 2.9 0 1 1-2.4-2.86"/>
+              <path d="M14 4c.4 2 2 3.6 4 4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.navTitle">Platform</h4>
+        <ul>
+          <li><a href="#benefits" data-i18n="nav.benefits">Benefits</a></li>
+          <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.companyTitle">Company</h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="terms.html" data-i18n="footer.terms">Terms and conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Flotix. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
