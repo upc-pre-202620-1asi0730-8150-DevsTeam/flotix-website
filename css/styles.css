@@ -6,7 +6,7 @@
   src:
     local("Araboto Regular"),
     local("Araboto-Regular"),
-    url("fonts/Araboto-Regular.woff2") format("woff2");
+    url("../fonts/Araboto-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -17,7 +17,7 @@
   src:
     local("Araboto Bold"),
     local("Araboto-Bold"),
-    url("fonts/Araboto-Bold.woff2") format("woff2");
+    url("../fonts/Araboto-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -677,6 +677,50 @@ section {
   line-height: 1.5;
   color: var(--color-on-night-muted);
   margin-top: 0.6rem;
+}
+
+/* ---------- Video placeholder (About the Product / About the Team) ---------- */
+.video-frame {
+  position: relative;
+  border: 1px solid var(--color-line-night);
+  background: var(--color-night-alt);
+  border-radius: var(--radius-md);
+  aspect-ratio: 16 / 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 46%, rgba(35, 95, 219, 0.18) 50%, transparent 54%);
+}
+.video-placeholder {
+  position: relative;
+  text-align: center;
+  color: var(--color-on-night-muted);
+}
+.video-placeholder .play-ring {
+  width: 68px;
+  height: 68px;
+  border: 1.5px solid var(--color-line-night);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-2);
+}
+.video-placeholder .play-ring svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-on-night);
+  margin-left: 3px;
+}
+.video-placeholder .note {
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 
 /* ---------- Footer ---------- */
