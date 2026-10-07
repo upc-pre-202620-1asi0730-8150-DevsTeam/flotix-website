@@ -905,3 +905,43 @@ section {
   color: var(--color-on-night);
   font-weight: 600;
 }
+
+/* Call to action band */
+.cta-band {
+  background: linear-gradient(135deg, var(--color-route-dark), var(--color-route));
+  color: #ffffff;
+  text-align: center;
+}
+.cta-inner {
+  max-width: 760px;
+}
+.cta-inner h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  color: #ffffff;
+}
+.cta-inner p {
+  margin-top: var(--space-2);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.btn-light {
+  background: #ffffff;
+  color: var(--color-route-dark);
+}
+.btn-light:hover {
+  background: var(--color-route-light);
+}
+.cta-band .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+.cta-band .btn-ghost:hover {
+  border-color: #ffffff;
+}
