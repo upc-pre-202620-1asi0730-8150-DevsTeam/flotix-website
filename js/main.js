@@ -249,3 +249,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+/* Video sections: paste a link in data-video-url on each .video-frame in index.html.
+   Supports YouTube, Vimeo, Google Drive and direct .mp4 / .webm links. */
+(function () {
+  function toEmbed(url) {
+    var m;
+    if ((m = url.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/))) {
+      return { type: 'iframe', src: 'https://www.youtube.com/embed/' + m[1] };
+    }
+    if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/))) {
+      return { type: 'iframe', src: 'https://player.vimeo.com/video/' + m[1] };
+    }
+    if ((m = url.match(/drive\.google\.com\/file\/d\/([\w-]+)/))) {
+      return { type: 'iframe', src: 'https://drive.google.com/file/d/' + m[1] + '/preview' };
+    }
+    if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url)) {
+      return { type: 'video', src: url };
+    }
+    return { type: 'iframe', src: url };
+  }
+
+  document.querySelectorAll('.video-frame[data-video-url]').forEach(function (frame) {
+    var url = (frame.getAttribute('data-video-url') || '').trim();
+    if (!url) return;
+    var info = toEmbed(url);
+    var el;
+    if (info.type === 'video') {
+      el = document.createElement('video');
+      el.controls = true;
+      el.preload = 'metadata';
+      el.src = info.src;
+    } else {
+      el = document.createElement('iframe');
+      el.src = info.src;
+      el.title = 'Video';
+      el.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+      el.allowFullscreen = true;
+      el.loading = 'lazy';
+    }
+    var ph = frame.querySelector('.video-placeholder');
+    if (ph) ph.remove();
+    frame.appendChild(el);
+  });
+})();
