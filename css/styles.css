@@ -870,3 +870,38 @@ section {
   }
 }
 
+
+/* Video sections */
+.video-section .video-head {
+  margin-inline: auto;
+  text-align: center;
+}
+.video-frame {
+  position: relative;
+  max-width: 960px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-night);
+  box-shadow: 0 24px 60px rgba(8, 20, 40, 0.18);
+}
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: var(--color-on-night);
+  font-weight: 600;
+}
