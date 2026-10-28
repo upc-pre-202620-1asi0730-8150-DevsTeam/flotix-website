@@ -5,8 +5,7 @@
   font-style: normal;
   src:
     local("Araboto Regular"),
-    local("Araboto-Regular"),
-    url("fonts/Araboto-Regular.woff2") format("woff2");
+    local("Araboto-Regular");
   font-display: swap;
 }
 
@@ -16,8 +15,7 @@
   font-style: normal;
   src:
     local("Araboto Bold"),
-    local("Araboto-Bold"),
-    url("fonts/Araboto-Bold.woff2") format("woff2");
+    local("Araboto-Bold");
   font-display: swap;
 }
 
