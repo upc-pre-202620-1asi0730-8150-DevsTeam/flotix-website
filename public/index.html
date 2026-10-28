@@ -5,42 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flotix</title>
 <meta name="description" content="Flotix is a fleet management platform with real time GPS and IoT monitoring.">
-<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
 
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="#home">
-      <img src="images/flotix-logo.png" alt="Flotix">
-    </a>
-
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#home" data-i18n="nav.home">Home</a></li>
-        <li><a href="#benefits" data-i18n="nav.benefits">Benefits</a></li>
-        <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <div class="lang-toggle" role="group" aria-label="Language selector">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="es" aria-pressed="false">ES</button>
-      </div>
-      <a class="btn btn-ghost desktop-only" href="https://flotix-app-web.netlify.app/dashboard" target="_blank" rel="noopener noreferrer" data-i18n="nav.signIn">Sign in</a>
-      <button type="button" class="btn btn-primary desktop-only" data-i18n="nav.signUp">Sign up</button>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 
 <main id="main-content">
 
@@ -199,7 +172,7 @@
             <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
             <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
           </div>
-          <div class="member-avatar-ring"><img src="images/team/gonzalo.jpg" alt="Gonzalo Alexander Jaime Forcelledo"></div>
+          <div class="member-avatar-ring"><img src="assets/images/team_member_gonzalo.jpg" alt="Gonzalo Alexander Jaime Forcelledo"></div>
           <div class="member-content-pane active" data-pane="info">
             <span class="member-role-label" data-i18n="team.member1.role">Software Engineering</span>
             <h3 class="member-name-large">Gonzalo Alexander Jaime Forcelledo</h3>
@@ -215,7 +188,7 @@
             <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
             <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
           </div>
-          <div class="member-avatar-ring"><img src="images/team/mauricio.jpg" alt="Mauricio Joao Ramirez Rodriguez"></div>
+          <div class="member-avatar-ring"><img src="assets/images/team_member_mauricio.jpg" alt="Mauricio Joao Ramirez Rodriguez"></div>
           <div class="member-content-pane active" data-pane="info">
             <span class="member-role-label" data-i18n="team.member2.role">Software Engineering</span>
             <h3 class="member-name-large">Mauricio Joao Ramirez Rodriguez</h3>
@@ -231,7 +204,7 @@
             <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
             <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
           </div>
-          <div class="member-avatar-ring"><img src="images/team/joaquin.jpg" alt="Joaquin Andre Lechuga Aguilar"></div>
+          <div class="member-avatar-ring"><img src="assets/images/team_member_joaquin.jpg" alt="Joaquin Andre Lechuga Aguilar"></div>
           <div class="member-content-pane active" data-pane="info">
             <span class="member-role-label" data-i18n="team.member3.role">Software Engineering</span>
             <h3 class="member-name-large">Joaquin Andre Lechuga Aguilar</h3>
@@ -247,7 +220,7 @@
             <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
             <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
           </div>
-          <div class="member-avatar-ring"><img src="images/team/gustavo.jpg" alt="Gustavo Alonso Olivares Lao"></div>
+          <div class="member-avatar-ring"><img src="assets/images/team_member_gustavo.jpg" alt="Gustavo Alonso Olivares Lao"></div>
           <div class="member-content-pane active" data-pane="info">
             <span class="member-role-label" data-i18n="team.member4.role">Software Engineering</span>
             <h3 class="member-name-large">Gustavo Alonso Olivares Lao</h3>
@@ -297,58 +270,8 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="images/flotix-logo-lockup.png" alt="Flotix — Tu flota, siempre bajo control">
-        <p data-i18n="footer.blurb">Fleet management with real time IoT and GPS monitoring for owners, drivers and mechanic workshops.</p>
-        <div class="social-links">
-          <a href="#" class="social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M15 8.5h-2a1.5 1.5 0 0 0-1.5 1.5v2h3.3l-.4 3H11.5V21h-3v-6H6.5v-3H8.5V9.5A4 4 0 0 1 12.5 5.5H15z"/>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="16.7" cy="7.3" r="0.9" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 4v10.2a2.9 2.9 0 1 1-2.4-2.86"/>
-              <path d="M14 4c.4 2 2 3.6 4 4"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+<div id="footer-placeholder"></div>
 
-      <div class="footer-col">
-        <h4 data-i18n="footer.navTitle">Platform</h4>
-        <ul>
-          <li><a href="#benefits" data-i18n="nav.benefits">Benefits</a></li>
-          <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="footer.companyTitle">Company</h4>
-        <ul>
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="terms.html" data-i18n="footer.terms">Terms and conditions</a></li>
-          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>&copy; 2026 Flotix. <span data-i18n="footer.rights">All rights reserved.</span></span>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
+<script src="assets/scripts/main.js"></script>
 </body>
 </html>

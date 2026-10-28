@@ -1,8 +1,8 @@
 
-const FLOTIX_DEFAULT_LANG = 'en';
-const FLOTIX_SUPPORTED_LANGS = ['en', 'es'];
+const flotixDefaultLang = 'en';
+const flotixSupportedLangs = ['en', 'es'];
 
-const FLOTIX_I18N = {
+const flotixI18n = {
     en: {
         'skip': 'Skip to content',
         'nav.home': 'Home',
@@ -212,7 +212,7 @@ const FLOTIX_I18N = {
 };
 
 function flotixResolveLang(requested) {
-    return FLOTIX_SUPPORTED_LANGS.includes(requested) ? requested : FLOTIX_DEFAULT_LANG;
+    return flotixSupportedLangs.includes(requested) ? requested : flotixDefaultLang;
 }
 
 function flotixGetInitialLang() {
@@ -222,12 +222,12 @@ function flotixGetInitialLang() {
     let stored = null;
     try { stored = window.localStorage.getItem('flotix-lang'); } catch (err) { /* no storage */ }
     if (stored) return flotixResolveLang(stored);
-    return FLOTIX_DEFAULT_LANG;
+    return flotixDefaultLang;
 }
 
 function flotixApplyLang(lang) {
     const resolved = flotixResolveLang(lang);
-    const dict = FLOTIX_I18N[resolved];
+    const dict = flotixI18n[resolved];
 
     document.documentElement.setAttribute('lang', resolved);
 
@@ -243,7 +243,27 @@ function flotixApplyLang(lang) {
     try { window.localStorage.setItem('flotix-lang', resolved); } catch (err) { /* storage unavailable */ }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+/* Reusable header/footer: injected from _header.html and _footer.html.
+   Paths are relative to the page, so every page must live in /public.
+   Note: fetch() needs a web server (Netlify, Live Server, `python -m http.server`), not file://. */
+async function flotixLoadPartial(placeholderId, url) {
+    const placeholder = document.getElementById(placeholderId);
+    if (!placeholder) return;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(response.status + ' ' + response.statusText);
+        placeholder.outerHTML = await response.text();
+    } catch (err) {
+        console.warn('Could not load ' + url + ':', err);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await Promise.all([
+        flotixLoadPartial('header-placeholder', '_header.html'),
+        flotixLoadPartial('footer-placeholder', '_footer.html'),
+    ]);
+
     flotixApplyLang(flotixGetInitialLang());
 
     document.querySelectorAll('.lang-toggle button').forEach((button) => {
