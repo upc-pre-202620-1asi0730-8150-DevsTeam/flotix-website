@@ -36,3 +36,11 @@ También funciona con Live Server (VS Code / WebStorm) o con Netlify apuntando a
 - Idioma: botones EN / ES en el header; la preferencia se guarda en `localStorage`.
 - Videos: pega el enlace en el atributo `data-video-url` de cada `.video-frame` en `index.html` (YouTube, Vimeo, Google Drive o .mp4).
 - Equipo: Gonzalo Jaime, Mauricio Ramirez, Joaquin Lechuga y Gustavo Olivares.
+
+## Despliegue en GitHub Pages
+
+1. Sube el contenido de `flotix-website/` a la raíz del repositorio (con `public/` y `.github/` dentro).
+2. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. Cada push a `main` publica la carpeta `public/` con el workflow `.github/workflows/pages.yml`.
+
+`public/.nojekyll` evita que Jekyll ignore `_header.html` y `_footer.html` (Jekyll no publica archivos que empiezan con `_`).
