@@ -1,4 +1,3 @@
-# Flotix Website
 
 Landing page de Flotix, plataforma de gestión de flotas con monitoreo GPS e IoT en tiempo real. Sitio estático en HTML, CSS y JavaScript, con soporte bilingüe (EN / ES).
 
