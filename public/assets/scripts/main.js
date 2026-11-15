@@ -105,6 +105,52 @@ const flotixI18n = {
         'terms.section5Title': '5. Professional responsibility',
         'terms.section5Body': 'The Flotix team follows recognized software engineering ethics guidance in how the platform is built, tested and deployed, and documents changes to the service through its public version control repository.',
         'terms.backLink': 'Back to the homepage',
+        'nav.contact': 'Contact',
+        'footer.contact': 'Contact',
+        'contact.title': 'Contact us',
+        'contact.lede': 'Have questions about Flotix, the IoT device or our plans? Write to us and the team will reply as soon as possible.',
+        'contact.infoTitle': 'Get in touch',
+        'contact.emailLabel': 'Email',
+        'contact.phoneLabel': 'Phone',
+        'contact.whatsappText': 'Chat with us',
+        'contact.locationLabel': 'Location',
+        'contact.locationValue': 'Lima, Peru',
+        'contact.hoursLabel': 'Business hours',
+        'contact.hoursValue': 'Monday to Friday, 9:00 a.m. to 6:00 p.m. (Lima time)',
+        'contact.followTitle': 'Follow us',
+        'contact.formTitle': 'Send us a message',
+        'contact.nameLabel': 'Full name',
+        'contact.emailFieldLabel': 'Your email',
+        'contact.phoneFieldLabel': 'Phone (optional)',
+        'contact.roleLabel': 'I am a…',
+        'contact.select': 'Select an option',
+        'contact.roleAdmin': 'Fleet administrator',
+        'contact.roleDriver': 'Driver',
+        'contact.rolePassenger': 'Passenger',
+        'contact.roleCompany': 'Company',
+        'contact.roleWorkshop': 'Mechanic workshop',
+        'contact.topicLabel': 'Topic',
+        'contact.topicDemo': 'Request a demo',
+        'contact.topicDevice': 'Buy the IoT device (GPS, odometer, fuel sensor)',
+        'contact.topicPlans': 'Plans and pricing',
+        'contact.topicSupport': 'Technical support',
+        'contact.topicOther': 'Other',
+        'contact.messageLabel': 'Message',
+        'contact.messagePlaceholder': 'Tell us how we can help…',
+        'contact.consent': 'I agree to be contacted about my request.',
+        'contact.privacyLink': 'Privacy policy',
+        'contact.submit': 'Send message',
+        'contact.note': 'Your email app will open with the message ready to send.',
+        'contact.errorRequired': 'Please complete all required fields and accept the consent box.',
+        'contact.errorEmail': 'Please enter a valid email address.',
+        'contact.success': 'Thanks! Your email app should open now. If it does not, write to us directly at the address on this page.',
+        'contact.faqTitle': 'Frequently asked questions',
+        'contact.faq1Q': 'How fast do you reply?',
+        'contact.faq1A': 'We aim to reply within one business day.',
+        'contact.faq2Q': 'How do I buy the IoT device?',
+        'contact.faq2A': 'Choose “Buy the IoT device” as the topic in the form and tell us how many vehicles you have. We will send you the options.',
+        'contact.faq3Q': 'I already have an account and need help.',
+        'contact.faq3A': 'Choose “Technical support”, and include the email of your account and a description of the problem.',
     },
     es: {
         'skip': 'Ir al contenido',
@@ -208,6 +254,52 @@ const flotixI18n = {
         'terms.section5Title': '5. Responsabilidad profesional',
         'terms.section5Body': 'El equipo de Flotix sigue lineamientos reconocidos de ética en ingeniería de software para construir, probar y desplegar la plataforma, y documenta los cambios del servicio en su repositorio público de control de versiones.',
         'terms.backLink': 'Volver al inicio',
+        'nav.contact': 'Contacto',
+        'footer.contact': 'Contacto',
+        'contact.title': 'Contáctanos',
+        'contact.lede': '¿Tienes preguntas sobre Flotix, el dispositivo IoT o nuestros planes? Escríbenos y el equipo te responderá lo antes posible.',
+        'contact.infoTitle': 'Ponte en contacto',
+        'contact.emailLabel': 'Correo electrónico',
+        'contact.phoneLabel': 'Teléfono',
+        'contact.whatsappText': 'Escríbenos por chat',
+        'contact.locationLabel': 'Ubicación',
+        'contact.locationValue': 'Lima, Perú',
+        'contact.hoursLabel': 'Horario de atención',
+        'contact.hoursValue': 'Lunes a viernes, de 9:00 a. m. a 6:00 p. m. (hora de Lima)',
+        'contact.followTitle': 'Síguenos',
+        'contact.formTitle': 'Envíanos un mensaje',
+        'contact.nameLabel': 'Nombre completo',
+        'contact.emailFieldLabel': 'Tu correo electrónico',
+        'contact.phoneFieldLabel': 'Teléfono (opcional)',
+        'contact.roleLabel': 'Soy…',
+        'contact.select': 'Selecciona una opción',
+        'contact.roleAdmin': 'Administrador de flota',
+        'contact.roleDriver': 'Conductor',
+        'contact.rolePassenger': 'Pasajero',
+        'contact.roleCompany': 'Empresa',
+        'contact.roleWorkshop': 'Taller mecánico',
+        'contact.topicLabel': 'Tema',
+        'contact.topicDemo': 'Solicitar una demostración',
+        'contact.topicDevice': 'Comprar el dispositivo IoT (GPS, odómetro y sensor de combustible)',
+        'contact.topicPlans': 'Planes y precios',
+        'contact.topicSupport': 'Soporte técnico',
+        'contact.topicOther': 'Otro',
+        'contact.messageLabel': 'Mensaje',
+        'contact.messagePlaceholder': 'Cuéntanos en qué podemos ayudarte…',
+        'contact.consent': 'Acepto que me contacten por mi solicitud.',
+        'contact.privacyLink': 'Política de privacidad',
+        'contact.submit': 'Enviar mensaje',
+        'contact.note': 'Se abrirá tu correo con el mensaje listo para enviar.',
+        'contact.errorRequired': 'Completa todos los campos obligatorios y acepta el consentimiento.',
+        'contact.errorEmail': 'Ingresa un correo electrónico válido.',
+        'contact.success': '¡Gracias! Tu correo debería abrirse ahora. Si no es así, escríbenos directamente a la dirección de esta página.',
+        'contact.faqTitle': 'Preguntas frecuentes',
+        'contact.faq1Q': '¿Qué tan rápido responden?',
+        'contact.faq1A': 'Buscamos responder en un día hábil.',
+        'contact.faq2Q': '¿Cómo compro el dispositivo IoT?',
+        'contact.faq2A': 'Elige “Comprar el dispositivo IoT” como tema en el formulario e indícanos cuántos vehículos tienes. Te enviaremos las opciones.',
+        'contact.faq3Q': 'Ya tengo una cuenta y necesito ayuda.',
+        'contact.faq3A': 'Elige “Soporte técnico” e incluye el correo de tu cuenta y una descripción del problema.',
     },
 };
 
@@ -234,6 +326,11 @@ function flotixApplyLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach((node) => {
         const key = node.getAttribute('data-i18n');
         if (dict[key] !== undefined) node.textContent = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
+        const key = node.getAttribute('data-i18n-placeholder');
+        if (dict[key] !== undefined) node.setAttribute('placeholder', dict[key]);
     });
 
     document.querySelectorAll('.lang-toggle button').forEach((button) => {
@@ -265,6 +362,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]);
 
     flotixApplyLang(flotixGetInitialLang());
+
+    const flotixPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.primary-nav a').forEach((link) => {
+        if (flotixPage && link.getAttribute('href') === flotixPage) link.setAttribute('aria-current', 'page');
+    });
 
     document.querySelectorAll('.lang-toggle button').forEach((button) => {
         button.addEventListener('click', () => flotixApplyLang(button.getAttribute('data-lang')));
@@ -346,3 +448,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     frame.appendChild(el);
   });
 })();
+
+
+/* Contact form: static site, so the form opens the visitor's email app with the message ready.
+   To receive messages without an email app, replace this with Formspree or Netlify Forms. */
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('contact-status');
+
+  function t(key) {
+    var lang = flotixResolveLang(document.documentElement.getAttribute('lang'));
+    return flotixI18n[lang][key] || key;
+  }
+  function show(message, isError) {
+    status.textContent = message;
+    status.className = 'form-status ' + (isError ? 'is-error' : 'is-ok');
+  }
+  function selectedText(select) {
+    return select.options[select.selectedIndex].text;
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var f = form.elements;
+    var name = f.name.value.trim();
+    var email = f.email.value.trim();
+    var phone = f.phone.value.trim();
+    var message = f.message.value.trim();
+
+    if (!name || !email || !f.role.value || !f.topic.value || !message || !f.consent.checked) {
+      show(t('contact.errorRequired'), true);
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      show(t('contact.errorEmail'), true);
+      return;
+    }
+
+    var subject = 'Flotix: ' + selectedText(f.topic);
+    var body = [
+      t('contact.nameLabel') + ': ' + name,
+      t('contact.emailFieldLabel') + ': ' + email,
+      phone ? t('contact.phoneFieldLabel').replace(/\s*\(.*\)/, '') + ': ' + phone : '',
+      t('contact.roleLabel') + ' ' + selectedText(f.role),
+      '',
+      message
+    ].filter(function (line, i) { return line !== '' || i === 4; }).join('\n');
+
+    window.location.href = 'mailto:' + form.getAttribute('data-to') +
+      '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    show(t('contact.success'), false);
+  });
+});
