@@ -10,6 +10,7 @@ flotix-website/
     ├── index.html        # Página principal
     ├── privacy.html      # Política de privacidad
     ├── terms.html        # Términos y condiciones
+    ├── contact.html      # Contacto (datos y formulario)
     ├── _header.html      # Encabezado reutilizable (se inyecta con JS)
     ├── _footer.html      # Pie de página reutilizable (se inyecta con JS)
     └── assets/
@@ -43,3 +44,9 @@ También funciona con Live Server (VS Code / WebStorm) o con Netlify apuntando a
 3. Cada push a `main` publica la carpeta `public/` con el workflow `.github/workflows/pages.yml`.
 
 `public/.nojekyll` evita que Jekyll ignore `_header.html` y `_footer.html` (Jekyll no publica archivos que empiezan con `_`).
+
+## Página de contacto
+
+`public/contact.html` reúne correo, teléfono, WhatsApp, ubicación, horario, redes y un formulario. Antes de publicar, reemplaza los datos de ejemplo (`contacto@flotix.example`, `+51 999 999 999`) en `contact.html`: el correo aparece también en el atributo `data-to` del formulario.
+
+Como GitHub Pages es un sitio estático, el formulario abre el correo del visitante con el mensaje listo. Para recibir mensajes sin esa limitación, se puede conectar Formspree o Netlify Forms.
