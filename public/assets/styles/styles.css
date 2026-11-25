@@ -555,10 +555,90 @@ section {
   margin-bottom: var(--space-5);
 }
 
-.team-container {
+.team-carousel {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.team-container {
+  display: flex;
   gap: var(--space-3);
+  overflow-x: auto;
+  padding-block: 8px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.team-container::-webkit-scrollbar {
+  display: none;
+}
+.team-container:focus-visible {
+  outline: 2px solid var(--color-fuel);
+  outline-offset: 4px;
+  border-radius: 20px;
+}
+.team-container .member-card {
+  flex: 0 0 calc((100% - 2 * var(--space-3)) / 3);
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-line-night);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-on-night);
+  transition:
+          background-color 150ms ease,
+          border-color 150ms ease,
+          opacity 150ms ease;
+}
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.carousel-btn:hover:not(:disabled) {
+  background: var(--color-route);
+  border-color: var(--color-route);
+}
+.carousel-btn:focus-visible {
+  outline: 2px solid var(--color-fuel);
+  outline-offset: 2px;
+}
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: var(--space-3);
+}
+.carousel-dots[hidden] {
+  display: none;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition:
+          background-color 150ms ease,
+          transform 150ms ease;
+}
+.carousel-dot.active {
+  background: var(--color-fuel);
+  transform: scale(1.3);
 }
 
 .member-card {
@@ -940,8 +1020,8 @@ section {
   .plan-grid {
     grid-template-columns: 1fr;
   }
-  .team-container {
-    grid-template-columns: 1fr 1fr;
+  .team-container .member-card {
+    flex-basis: calc((100% - var(--space-3)) / 2);
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -988,8 +1068,14 @@ section {
   section {
     padding-block: var(--space-5);
   }
-  .team-container {
-    grid-template-columns: 1fr;
+  .team-carousel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .carousel-btn {
+    display: none;
+  }
+  .team-container .member-card {
+    flex-basis: 100%;
   }
   .footer-grid {
     grid-template-columns: 1fr;

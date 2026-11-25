@@ -63,6 +63,9 @@ const flotixI18n = {
         'team.title': 'Meet the team',
         'team.tabs.info': 'Info',
         'team.tabs.bio': 'Bio',
+        'team.prev': 'Previous member',
+        'team.next': 'Next member',
+        'team.carouselLabel': 'Team members',
         'team.member1.role': 'Software Engineering',
         'team.member1.bio': 'Curious and always learning, Gonzalo brings that same drive for discovery to how Flotix tracks and improves a fleet.',
         'team.member2.role': 'Software Engineering',
@@ -71,6 +74,10 @@ const flotixI18n = {
         'team.member3.bio': 'An enthusiastic programmer who enjoys learning new technologies, Joaquin contributes ideas, technical direction and organization to Flotix.',
         'team.member4.role': 'Software Engineering',
         'team.member4.bio': 'Practical and curious, Gustavo turns what he learns into solutions that make Flotix genuinely useful for fleet owners.',
+        'team.member5.role': 'Software Engineering',
+        'team.member5.bio': 'Interested in web development and in learning new technologies by applying them to real projects, Jhon brings clear technical solutions and organized teamwork to Flotix.',
+        'team.member6.role': 'Software Engineering',
+        'team.member6.bio': 'Organized and detail-oriented, Maria Luisa designs the interfaces of Flotix so the product feels intuitive and easy to use.',
         'footer.blurb': 'Fleet management with real time IoT and GPS monitoring for owners, drivers and mechanic workshops.',
         'footer.navTitle': 'Platform',
         'footer.companyTitle': 'Company',
@@ -212,6 +219,9 @@ const flotixI18n = {
         'team.title': 'Conoce al equipo',
         'team.tabs.info': 'Info',
         'team.tabs.bio': 'Bio',
+        'team.prev': 'Integrante anterior',
+        'team.next': 'Integrante siguiente',
+        'team.carouselLabel': 'Integrantes del equipo',
         'team.member1.role': 'Ingeniería de Software',
         'team.member1.bio': 'Curioso y siempre aprendiendo, Gonzalo aplica esa misma pasión por descubrir a cómo Flotix rastrea y mejora una flota.',
         'team.member2.role': 'Ingeniería de Software',
@@ -220,6 +230,10 @@ const flotixI18n = {
         'team.member3.bio': 'Programador entusiasta al que le gusta aprender nuevas tecnologías, Joaquin aporta ideas, dirección técnica y organización a Flotix.',
         'team.member4.role': 'Ingeniería de Software',
         'team.member4.bio': 'Práctico y curioso, Gustavo convierte lo que aprende en soluciones que hacen de Flotix algo realmente útil para los dueños de flota.',
+        'team.member5.role': 'Ingeniería de Software',
+        'team.member5.bio': 'Interesado en el desarrollo web y en aprender nuevas tecnologías aplicándolas a proyectos prácticos, Jhon aporta soluciones técnicas claras y un trabajo en equipo ordenado a Flotix.',
+        'team.member6.role': 'Ingeniería de Software',
+        'team.member6.bio': 'Organizada y atenta al detalle, Maria Luisa diseña las interfaces de Flotix para que el producto sea intuitivo y fácil de usar.',
         'footer.blurb': 'Gestión de flotas con monitoreo IoT y GPS en tiempo real para dueños, conductores y talleres mecánicos.',
         'footer.navTitle': 'Plataforma',
         'footer.companyTitle': 'Empresa',
@@ -333,6 +347,11 @@ function flotixApplyLang(lang) {
         if (dict[key] !== undefined) node.setAttribute('placeholder', dict[key]);
     });
 
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((node) => {
+        const key = node.getAttribute('data-i18n-aria-label');
+        if (dict[key] !== undefined) node.setAttribute('aria-label', dict[key]);
+    });
+
     document.querySelectorAll('.lang-toggle button').forEach((button) => {
         button.setAttribute('aria-pressed', String(button.getAttribute('data-lang') === resolved));
     });
@@ -402,6 +421,83 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     });
+
+    /* Team carousel: native scroll snapping, arrow buttons and page dots. */
+    const teamTrack = document.getElementById('team-track');
+    const teamDots = document.getElementById('team-dots');
+    if (teamTrack && teamDots) {
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const cards = Array.from(teamTrack.querySelectorAll('.member-card'));
+
+        const stepSize = () => {
+            if (cards.length < 2) return teamTrack.clientWidth;
+            return cards[1].offsetLeft - cards[0].offsetLeft;
+        };
+        const pageCount = () => {
+            const visible = Math.max(1, Math.round(teamTrack.clientWidth / stepSize()));
+            return Math.max(1, cards.length - visible + 1);
+        };
+        const currentPage = () => {
+            const max = teamTrack.scrollWidth - teamTrack.clientWidth;
+            if (teamTrack.scrollLeft >= max - 2) return pageCount() - 1;
+            return Math.min(pageCount() - 1, Math.round(teamTrack.scrollLeft / stepSize()));
+        };
+        let pendingPage = null;
+        let pendingTimer = null;
+        const basePage = () => (pendingPage !== null ? pendingPage : currentPage());
+        const goTo = (page) => {
+            pendingPage = page;
+            window.clearTimeout(pendingTimer);
+            pendingTimer = window.setTimeout(() => {
+                pendingPage = null;
+            }, 700);
+            teamTrack.scrollTo({ left: page * stepSize(), behavior: 'smooth' });
+        };
+
+        const renderDots = () => {
+            const total = pageCount();
+            if (teamDots.children.length !== total) {
+                teamDots.innerHTML = '';
+                for (let i = 0; i < total; i++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'carousel-dot';
+                    dot.setAttribute('aria-label', String(i + 1));
+                    dot.addEventListener('click', () => goTo(i));
+                    teamDots.appendChild(dot);
+                }
+            }
+            teamDots.hidden = total < 2;
+        };
+
+        const update = () => {
+            renderDots();
+            const page = currentPage();
+            Array.from(teamDots.children).forEach((dot, i) => {
+                dot.classList.toggle('active', i === page);
+                if (i === page) dot.setAttribute('aria-current', 'true');
+                else dot.removeAttribute('aria-current');
+            });
+            prevBtn.disabled = page <= 0;
+            nextBtn.disabled = page >= pageCount() - 1;
+        };
+
+        prevBtn.addEventListener('click', () => goTo(Math.max(0, basePage() - 1)));
+        nextBtn.addEventListener('click', () => goTo(Math.min(pageCount() - 1, basePage() + 1)));
+        teamTrack.addEventListener('scroll', () => window.requestAnimationFrame(update), { passive: true });
+        teamTrack.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                nextBtn.click();
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                prevBtn.click();
+            }
+        });
+        window.addEventListener('resize', update);
+        update();
+    }
 });
 
 
