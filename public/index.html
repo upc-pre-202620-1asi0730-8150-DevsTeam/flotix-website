@@ -45,23 +45,6 @@
     </div>
   </section>
 
-  <!-- Sobre el producto (video) -->
-  <section id="about-product" class="video-section">
-    <div class="container">
-      <div class="section-head video-head">
-        <span class="kicker" data-i18n="aboutProduct.kicker">KICKER</span>
-        <h2 data-i18n="aboutProduct.title">TITLE</h2>
-        <p data-i18n="aboutProduct.subtitle">SUB</p>
-      </div>
-      <div class="video-frame" data-video-url="https://youtu.be/clagWq_iPAw">
-        <div class="video-placeholder">
-          <svg viewBox="0 0 24 24" width="56" height="56" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.5v7l6-3.5z" fill="currentColor"/></svg>
-          <span data-i18n="aboutProduct.placeholder">Video coming soon</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Beneficios -->
   <section id="benefits" class="section-alt">
     <div class="container">
@@ -103,6 +86,23 @@
           </svg>
           <h3 data-i18n="benefits.monitoringTitle">Real time monitoring</h3>
           <p data-i18n="benefits.monitoringBody">Track location, routes and speed for every active unit through the GPS and IoT device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre el producto (video) -->
+  <section id="about-product" class="video-section">
+    <div class="container">
+      <div class="section-head video-head">
+        <span class="kicker" data-i18n="aboutProduct.kicker">KICKER</span>
+        <h2 data-i18n="aboutProduct.title">TITLE</h2>
+        <p data-i18n="aboutProduct.subtitle">SUB</p>
+      </div>
+      <div class="video-frame" data-video-url="https://youtu.be/clagWq_iPAw">
+        <div class="video-placeholder">
+          <svg viewBox="0 0 24 24" width="56" height="56" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.5v7l6-3.5z" fill="currentColor"/></svg>
+          <span data-i18n="aboutProduct.placeholder">Video coming soon</span>
         </div>
       </div>
     </div>
@@ -165,73 +165,112 @@
     <div class="container">
       <h2 class="team-title-modern" data-i18n="team.title">Meet the team</h2>
 
-      <div class="team-container">
+      <div class="team-carousel">
+        <button class="carousel-btn carousel-prev" type="button" data-i18n-aria-label="team.prev" aria-label="Previous member">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="team-container" id="team-track" tabindex="0" aria-label="Team members" data-i18n-aria-label="team.carouselLabel">
+          <div class="member-card" data-member="1">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_gonzalo.jpg" alt="Gonzalo Alexander Jaime Forcelledo"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member1.role">Software Engineering</span>
+              <h3 class="member-name-large">Gonzalo Alexander Jaime Forcelledo</h3>
+              <span class="member-code">U202319329</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member1.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
+          </div>
 
-        <div class="member-card" data-member="1">
-          <div class="member-tabs">
-            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
-            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+          <div class="member-card" data-member="2">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_mauricio.jpg" alt="Mauricio Joao Ramirez Rodriguez"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member2.role">Software Engineering</span>
+              <h3 class="member-name-large">Mauricio Joao Ramirez Rodriguez</h3>
+              <span class="member-code">U202218235</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member2.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
           </div>
-          <div class="member-avatar-ring"><img src="assets/images/team_member_gonzalo.jpg" alt="Gonzalo Alexander Jaime Forcelledo"></div>
-          <div class="member-content-pane active" data-pane="info">
-            <span class="member-role-label" data-i18n="team.member1.role">Software Engineering</span>
-            <h3 class="member-name-large">Gonzalo Alexander Jaime Forcelledo</h3>
-            <span class="member-code">U202319329</span>
+
+          <div class="member-card" data-member="3">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_joaquin.jpg" alt="Joaquin Andre Lechuga Aguilar"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member3.role">Software Engineering</span>
+              <h3 class="member-name-large">Joaquin Andre Lechuga Aguilar</h3>
+              <span class="member-code">U202221619</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member3.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
           </div>
-          <div class="member-content-pane" data-pane="bio">
-            <p class="bio-text" data-i18n="team.member1.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+
+          <div class="member-card" data-member="4">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_gustavo.jpg" alt="Gustavo Alonso Olivares Lao"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member4.role">Software Engineering</span>
+              <h3 class="member-name-large">Gustavo Alonso Olivares Lao</h3>
+              <span class="member-code">U202216448</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member4.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
+          </div>
+
+          <div class="member-card" data-member="5">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_jhon.jpg" alt="Jhon Jordy Jaramillo Mayta"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member5.role">Software Engineering</span>
+              <h3 class="member-name-large">Jhon Jordy Jaramillo Mayta</h3>
+              <span class="member-code">U202520310</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member5.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
+          </div>
+
+          <div class="member-card" data-member="6">
+            <div class="member-tabs">
+              <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
+              <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
+            </div>
+            <div class="member-avatar-ring"><img src="assets/images/team_member_maria.jpg" alt="Maria Luisa Munayco Apolaya"></div>
+            <div class="member-content-pane active" data-pane="info">
+              <span class="member-role-label" data-i18n="team.member6.role">Software Engineering</span>
+              <h3 class="member-name-large">Maria Luisa Munayco Apolaya</h3>
+              <span class="member-code">U20231C995</span>
+            </div>
+            <div class="member-content-pane" data-pane="bio">
+              <p class="bio-text" data-i18n="team.member6.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
+            </div>
           </div>
         </div>
-
-        <div class="member-card" data-member="2">
-          <div class="member-tabs">
-            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
-            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
-          </div>
-          <div class="member-avatar-ring"><img src="assets/images/team_member_mauricio.jpg" alt="Mauricio Joao Ramirez Rodriguez"></div>
-          <div class="member-content-pane active" data-pane="info">
-            <span class="member-role-label" data-i18n="team.member2.role">Software Engineering</span>
-            <h3 class="member-name-large">Mauricio Joao Ramirez Rodriguez</h3>
-            <span class="member-code">U202218235</span>
-          </div>
-          <div class="member-content-pane" data-pane="bio">
-            <p class="bio-text" data-i18n="team.member2.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
-          </div>
-        </div>
-
-        <div class="member-card" data-member="3">
-          <div class="member-tabs">
-            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
-            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
-          </div>
-          <div class="member-avatar-ring"><img src="assets/images/team_member_joaquin.jpg" alt="Joaquin Andre Lechuga Aguilar"></div>
-          <div class="member-content-pane active" data-pane="info">
-            <span class="member-role-label" data-i18n="team.member3.role">Software Engineering</span>
-            <h3 class="member-name-large">Joaquin Andre Lechuga Aguilar</h3>
-            <span class="member-code">U202221619</span>
-          </div>
-          <div class="member-content-pane" data-pane="bio">
-            <p class="bio-text" data-i18n="team.member3.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
-          </div>
-        </div>
-
-        <div class="member-card" data-member="4">
-          <div class="member-tabs">
-            <button class="tab-btn active" data-tab="info" data-i18n="team.tabs.info">Info</button>
-            <button class="tab-btn" data-tab="bio" data-i18n="team.tabs.bio">Bio</button>
-          </div>
-          <div class="member-avatar-ring"><img src="assets/images/team_member_gustavo.jpg" alt="Gustavo Alonso Olivares Lao"></div>
-          <div class="member-content-pane active" data-pane="info">
-            <span class="member-role-label" data-i18n="team.member4.role">Software Engineering</span>
-            <h3 class="member-name-large">Gustavo Alonso Olivares Lao</h3>
-            <span class="member-code">U202216448</span>
-          </div>
-          <div class="member-content-pane" data-pane="bio">
-            <p class="bio-text" data-i18n="team.member4.bio">Working on Flotix as part of the Developers Team for the Web Applications course.</p>
-          </div>
-        </div>
-
+        <button class="carousel-btn carousel-next" type="button" data-i18n-aria-label="team.next" aria-label="Next member">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
+      <div class="carousel-dots" id="team-dots"></div>
     </div>
   </section>
 
